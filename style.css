@@ -96,6 +96,7 @@ header p {
     padding: 10px;
     border: 1px solid var(--border-color);
     border-radius: 6px;
+    font-family: "Cactus Classical Serif", serif;
     font-size: 1rem;
     background-color: #fff;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -118,6 +119,7 @@ button {
     padding: 12px 25px;
     border: none;
     border-radius: 6px;
+    font-family: "Cactus Classical Serif", serif;
     font-size: 1rem;
     font-weight: 500;
     cursor: pointer;
