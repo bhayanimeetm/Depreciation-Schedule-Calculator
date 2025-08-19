@@ -172,13 +172,31 @@ button {
 #results-container {
     margin-top: 30px;
 }
+
+/* Style the title to be consistent with other card titles */
+#results-container h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+/* This new wrapper will handle the horizontal scrolling */
+.table-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
 .results-table {
     width: 100%;
     border-collapse: separate; /* important: allows rounded corners */
     border-spacing: 0; /* remove gaps between cells */
-    margin-top: 20px;
     border-radius: 10px;
     overflow: hidden; /* hides overflow on rounded corners */
+    min-width: 800px; /* Ensures table has a minimum width, forcing scroll on narrow screens */
 }
 
 .results-table th,
@@ -201,4 +219,29 @@ button {
 }
 .results-table .fy-total-row td {
     background-color: #fafbfc;
+}
+
+/* --- Responsive Styles for Mobile Devices --- */
+@media (max-width: 768px) {
+    body {
+        background: #fff; /* Removes the gradient background on mobile */
+        padding: 10px;    /* Reduces the outer space from 20px to 10px */
+    }
+
+    .container {
+        padding: 15px;    /* Reduces the main card's internal padding */
+        box-shadow: none; /* Removes the shadow to save screen estate */
+    }
+
+    .container:hover {
+        box-shadow: none;
+    }
+
+    .card {
+        padding: 15px; /* Reduces padding inside the form and analysis cards */
+    }
+
+    header h1 {
+        font-size: 1.5rem; /* Makes the main title smaller on phones */
+    }
 }

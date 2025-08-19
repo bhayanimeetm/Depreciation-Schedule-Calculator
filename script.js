@@ -191,8 +191,14 @@ function calculateValueAtDate() {
 
 function displaySchedule(schedule) {
     const container = document.getElementById('results-container');
+    // Clear previous content and add the fixed title
+    container.innerHTML = '<h2>Depreciation Schedule</h2>'; 
+
+    // Create a new div to wrap the table, this will be the scrollable element
+    const tableWrapper = document.createElement('div');
+    tableWrapper.className = 'table-scroll-wrapper';
+
     let tableHTML = `
-        <h2>Depreciation Schedule</h2>
         <table class="results-table" id="depreciation-table">
             <thead>
                 <tr>
@@ -219,8 +225,12 @@ function displaySchedule(schedule) {
                 <td>${formatCurrencyIN(row.closingWdv)}</td>
             </tr>`;
     });
+
     tableHTML += `</tbody></table>`;
-    container.innerHTML = tableHTML;
+    tableWrapper.innerHTML = tableHTML;
+    
+    // Append the scrollable wrapper to the main container
+    container.appendChild(tableWrapper);
 }
 
 function displayAnalysisResult(accumulatedDep, wdv, date, isError = false) {
