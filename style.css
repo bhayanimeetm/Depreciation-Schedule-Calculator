@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #96702c;
-    --primary-color-dark: #5e461c;
+    --primary-color: #38a3a5;
+    --primary-color-dark: #22577a;
     --secondary-color: #f5f7fa;
     --border-color: #cacaca;
     --text-color: #000000;
@@ -9,7 +9,7 @@
 
 body {
     font-family: "Cactus Classical Serif", serif;
-    background: linear-gradient(135deg, #FFBC4C 0%, #FFDE63 50%, #FEFFC4 100%);
+    background: linear-gradient(135deg, #c7f9cc 0%, #80ed99 50%, #57cc99 100%);
     color: var(--text-color);
     margin: 0;
     padding: 20px;
@@ -32,7 +32,6 @@ body {
 
 header {
     text-align: center;
-    
     padding-bottom: 15px;
     margin-bottom: 10px;
 }
@@ -40,15 +39,15 @@ header {
 header h1 {
     margin: 0;
     color: var(--primary-color);
-    font-weight: 900;
-    font-size: 2rem;
-    letter-spacing: 0.15rem;
+    font-weight: 500;
+    font-size: 3rem;
+    letter-spacing: 0rem;
 }
 header p {
     margin: 5px 0 0;
     color: #555;
-    font-size: 1.2rem;
-    letter-spacing: 0.4rem;
+    font-size: 1.5rem;
+    letter-spacing: 0rem;
 }
 
 .card {
@@ -69,7 +68,7 @@ header p {
     margin-bottom: 20px;
     font-size: 1.25rem;
     color: var(--primary-color);
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 1px solid #f0f0f0;
     padding-bottom: 8px;
 }
@@ -179,7 +178,7 @@ button {
     margin-bottom: 20px;
     font-size: 1.25rem;
     color: var(--primary-color);
-    font-weight: 600;
+    font-weight: 500;
     border-bottom: 1px solid #f0f0f0;
     padding-bottom: 8px;
 }
@@ -207,7 +206,7 @@ button {
 }
 .results-table th {
     background-color: var(--header-bg);
-    font-weight: 700;
+    font-weight: 500;
     text-align: center;
 }
 .results-table td {
@@ -244,4 +243,20 @@ button {
     header h1 {
         font-size: 1.5rem; /* Makes the main title smaller on phones */
     }
+}
+/* --- Fix for cut-off borders on rounded table corners --- */
+.results-table thead tr:first-child th:first-child {
+    border-top-left-radius: 10px;
+}
+
+.results-table thead tr:first-child th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.results-table tbody tr:last-child td:first-child {
+    border-bottom-left-radius: 10px;
+}
+
+.results-table tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 10px;
 }

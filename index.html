@@ -12,8 +12,8 @@
 <body>
     <div class="container">
         <header>
-            <h1>DEPRECIATION SCHEDULE CALCULATOR</h1>
-            <p>BY MEET BHAYANI</p>
+            <h1>Depreciation Schedule Calculator</h1>
+            <p>By Meet Bhayani</p>
         </header>
 
         <div class="card">
@@ -58,6 +58,7 @@
                 <div class="form-actions">
                     <button type="submit" class="btn-primary">Calculate Schedule</button>
                     <button type="button" id="clear-btn" class="btn-secondary">Clear</button>
+                    <button type="button" id="pdf-btn" class="btn-primary" disabled>Download PDF</button>
                     </div>
             </form>
         </div>
@@ -78,5 +79,15 @@
             </div>
     </div>
     <script src="script.js"></script>
+
+</div>
+    <div id="results-container">
+    </div>
+</div>
+
+<script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+<script src="https://unpkg.com/jspdf-autotable@latest/dist/jspdf.plugin.autotable.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>
